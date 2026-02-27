@@ -1,22 +1,20 @@
 'use strict'
 
-class country {
+function Country(title, capital, population, area) {
 
-    constructor(title, capital, population, area) {
         this.title = title;
         this.capital = capital;
         this.population = population;
         this.area = area;
-    }
-    
-    showCountry() {
+        
+        this.showCountry = function() {
         return `Страна ${this.title}, столица ${this.capital}, популяция ${this.population}, площадь ${this.area}`
     }
 }
 
-const Ukraine = new country('Ukraine', 'Kyiv', 31_000_000, 603_628);
+const ukraine = new Country('Ukraine', 'Kyiv', 31_000_000, 603_628);
 
-const Poland = new country('Poland', 'Warsaw', 37_800_000, 312_685);
+const poland = new Country('Poland', 'Warsaw', 37_800_000, 312_685);
 
 function keyInfoObject(obj){
 
@@ -37,6 +35,6 @@ function keyInfoObject(obj){
 }
 
 
-keyInfoObject(Ukraine);
+keyInfoObject(ukraine);
 console.log('---------------')
-keyInfoObject(Poland);
+keyInfoObject(poland);
